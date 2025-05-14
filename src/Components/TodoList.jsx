@@ -2,7 +2,16 @@ import React, { useState } from 'react';
 import './TodoList.css';
 
 const TodoList = () => {
-  
+const [todos, setTodos] = useState([]);
+Const [headingInput, SetHeadingInput] = useState('');
+Const [listInputs, setListInputs] =useState({});  
+
+const handleAddTodo = () => {
+    if (headingInput.trim() !== '') {
+      setTodos([...todos, { heading: headingInput, lists: [] }]);
+      setHeadingInput('');
+    }
+  };
 
   return (
     <>
